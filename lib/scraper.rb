@@ -32,8 +32,8 @@ class Scraper
 
     students_profile.each do |student|
       info = {
-        :profile_quote => student.css(" div.vitals-text-container div.profile-quote").text,
-        :bio => student.css(" div.details-container div.bio-content.content-holder div.description-holder p").text
+        :profile_quote => student.css(" div.profile-quote").text,
+        :bio => student.css(" div.description-holder p").text
       }
       
       links = student.css(" div.social-icon-container a")
